@@ -1,0 +1,397 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+#logo{
+    margin-left: 12vw;
+}
+
+
+/* Main container */
+#container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 100vw;
+    height: 75vh;
+    background-color: #f8f9fa;
+    padding: 0 5vw;
+}
+
+/* Form styling */
+#form {
+    flex: 1;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+#form h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#form label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.2rem;
+}
+
+#form input {
+    width: 40vw;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+#form button {
+    width: 40vw;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff9900; 
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form button:hover {
+    background-color: #e68a00;
+}
+
+#form span {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+#form a {
+    color: #007bff;
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+#form a:hover {
+    text-decoration: underline;
+}
+
+/* Image container */
+#image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#image-div{
+   
+    height: 75vh;
+    width: 50vw;
+}
+
+#burgerLoginImage {
+    
+    /* margin-top: ; */
+    margin-top: 0%;
+    border-radius: 10px; /* Rounded corners for the image */  
+    height: 75vh;
+    width: 30vw;
+    margin-left: 15vw;
+    text-align: center;  
+    padding: 2vh;  
+    /* margin-top: 5vh; */
+/* b   order: 3px solid */
+}
+
+
+/* Footer section */
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height:25vh;
+    background-color: #f1f1f1;
+    padding: 1rem 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+}
+
+#footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* #footer img {
+    width: 120px;
+} */
+
+#footer a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+#footer a:hover {
+    color: #333;
+}
+
+
+@media (max-width: 40vw) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #form, #image-container {
+        flex: none;
+        width: 100%;
+        max-width: 90%;
+    }
+
+    #footer {
+        /* flex-direction: column; */
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* Subscription box container */
+#footer div input[type="email"] {
+    /* width: 10;  */
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    /* border-radius: 25px 0 0 25px;  */
+    
+    outline: none;
+}
+
+#footer div button {
+    /* width: 30%;  */
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff9900; /* Orange color for the button */
+    border: none;
+    /* border-radius: 0 25px 25px 0;  */
+    cursor: pointer;
+    /* transition: background-color 0.3s ease; */
+}
+
+#footer div button:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+}
+
+#footer div {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: flex-start;  */
+    /* gap: 0;  */
+    /* max-width: 400px; */
+}
+
+#footerLogo{
+    /* height: 25vh;
+    width: 25vw; */
+}
+
+#LOGO2{
+    height: 7vh;
+    width: 14vw;
+}
+#playstore{
+    height: 4vh;
+    width: 18vw;
+}
+
+/* .wrapper {
+    position: relative;
+    
+}
+
+.wrapper input {
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    width: 20vw;
+    height: 6.5vh;
+}
+
+.wrapper button {
+    border-radius: 100px;
+    width: 9vw;
+    height: 6.5vh;
+    aspect-ratio: 1;
+    
+    position: absolute;
+    top: 10%;
+    right: 5px;
+} */
+
+
+.wrapper {
+    position: relative;
+    display: inline-block;
+    height: 25vh;
+    width: 20vw; /*Adjust width as needed*/
+}
+
+.wrapper input {
+    /* position: absolute; */
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 1rem 4rem 1rem 2rem; /* Add extra padding on the right for the button */
+    width: 100%; /* Make input take full width of the wrapper */
+    height: 6.5vh;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+.wrapper button {
+    position: absolute;
+    top: 68%; /* Center the button vertically */
+    transform: translateY(-50%);
+    right: 0%; /* Align to the right edge of the input */
+    border-radius: 100px;
+    width: 9vw;
+    height: 6.5vh;
+    background: white; /* Optional for better visibility */
+    border: none; /* Optional to remove the border */
+    cursor: pointer; /* Optional for pointer cursor */
+}
+
+#social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    overflow: hidden;
+}
+
+#container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+}
+
+#form{
+    height: 75%;
+    width: 50%;
+} */
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow: hidden;
+}
+
+#container {
+    height: 100vh; 
+    width: 100vw; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    align-items: center;
+    gap: 2vw; 
+}
+
+#form {
+    flex: 1; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    height: 100%;
+}
+
+#form h1 {
+    margin-bottom: 1rem;
+}
+
+#form div {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+#form input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#form button {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#burgerLoginImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+}
+
+#image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+} */
