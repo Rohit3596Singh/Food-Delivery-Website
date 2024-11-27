@@ -1,48 +1,79 @@
-const mongoose  = require ("mongoose")
-const Schema = mongoose.Schema()
+// const mongoose  = require ("mongoose")
+// const { applyDefaults } = require("./user.schema")
+// const Schema = mongoose.Schema;
 
-app.use('/uploads', express.static('uploads'));
-// app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
+// // app.use('/uploads', express.static('uploads'));
+// // app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
-const Restaurants = new Schema(
-    {
-        "id":"1",
-        "name":"McDonald's",
-        "description": "fast food restraunt",
-        "image":"../uploads/MacD.png"
-    },
-    {
-        "id":"2",
-        "name":"Papa Johns",
-        "description": "fast food restraunt",
-        "image":"../uploads/papaJohns.png"
-    },
-    {
-        "id":"3",
-        "name":"KFC",
-        "description": "fast food restraunt",
-        "image":"../uploads/KFC.png"
-    },
-    
-    {
-        "id":"4",
-        "name":"Texas",
-        "description": "fast food restraunt",
-        "image":"../uploads/Texas.png"
-    },
-    {
-        "id":"5",
-        "name":"Burger King",
-        "description": "fast food restraunt",
-        "image":"../uploads/BurgerKing.png"
-    },
-    {
-        "id":"6",
-        "name":"Shaurma",
-        "description": "fast food restraunt",
-        "image":"../uploads/shaurma.png"
-    },
-)
+// const DishSchema = new Schema([{
+//     name: {
+//       type: String,
+//       required: true,
+//     },
+//     price: {
+//       type: Number,
+//       required: true,
+//     },
+//   }])
 
-const RestaurantListModel = mongoose.model("restaurant",Restaurants)
-module.exports = RestaurantListModel;
+
+// const RestaurantSchema = new Schema([{
+//     name:{
+//         type:String,
+//         required:true,
+//     },
+//     imageUrl:{
+//         type:String,
+//     },
+//     description:{
+//         type:String,
+//         required:true,
+//     },
+//     dishes:[DishSchema]
+// }])
+
+// const RestaurantModel = mongoose.model("restaurant",RestaurantSchema)
+// module.exports = RestaurantModel;
+
+
+
+
+
+
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+
+app.use(express.static("uploads")); // Ensure images are in the 'uploads' folder
+
+// Define the dish schema
+const DishSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+});
+
+// Define the restaurant schema
+const RestaurantSchema = new Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  imageUrl: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  dishes: [DishSchema], // Array of dishes
+});
+
+const RestaurantModel = mongoose.model("Restaurant", RestaurantSchema);
+module.exports = RestaurantModel;

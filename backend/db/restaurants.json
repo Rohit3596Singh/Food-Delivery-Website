@@ -1,0 +1,68 @@
+[
+{
+    "id":"1",
+    "name":"McDonald's",
+    "description": "fast food restaurant",
+    "image":"../uploads/MacD.png",
+    "dishes": [
+  { "name": "Burger", "price": 12.99 },
+  { "name": "Fries", "price": 3.99 },
+  { "name": "Cold Drink", "price": 6.99 }]
+},
+{
+    "id":"2",
+    "name":"Papa Johns",
+    "description": "fast food restaurant",
+    "image":"../uploads/papaJohns.png",
+    "dishes": [
+        { "name": "Burger", "price": 12.99 },
+        { "name": "Fries", "price": 3.99 },
+        { "name": "Cold Drink", "price": 6.99 }
+      ]
+},
+{
+    "id":"3",
+    "name":"KFC",
+    "description": "fast food restaurant",
+    "image":"../uploads/KFC.png",
+    "dishes": [
+        { "name": "Burger", "price": 12.99 },
+        { "name": "Fries", "price": 3.99 },
+        { "name": "Cold Drink", "price": 6.99 }
+      ]
+},
+
+{
+    "id":"4",
+    "name":"Texas",
+    "description": "fast food restaurant",
+    "image":"../uploads/Texas.png",
+    "dishes": [
+        { "name": "Burger", "price": 12.99 },
+        { "name": "Fries", "price": 3.99 },
+        { "name": "Cold Drink", "price": 6.99 }
+      ]
+},
+{
+    "id":"5",
+    "name":"Burger King",
+    "description": "fast food restaurant",
+    "image":"../uploads/BurgerKing.png",
+    "dishes": [
+        { "name": "Burger", "price": 12.99 },
+        { "name": "Fries", "price": 3.99 },
+        { "name": "Cold Drink", "price": 6.99 }
+      ]
+},
+{
+    "id":"6",
+    "name":"Shaurma",
+    "description": "fast food restaurant",
+    "image":"../uploads/shaurma.png",
+    "dishes": [
+        { "name": "Burger", "price": 12.99 },
+        { "name": "Fries", "price": 3.99 },
+        { "name": "Cold Drink", "price": 6.99 }
+      ]
+}
+]
