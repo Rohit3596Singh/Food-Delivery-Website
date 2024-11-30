@@ -50,14 +50,13 @@ const login = async(req,res)=>{
             {expiresIn : "24h"}
         )
 
-        res.status(200)
-            .json({
-                message:"Login Successfull",
-                success:true,
-                jwtToken,
-                email,
-                name: user.name
-            })
+        res.status(200).json({
+            message: "Login Successful",
+            success: true,
+            jwtToken,
+            name: user.name,
+            email: user.email, // Ensure this is present
+        });
     }
     catch(err){
         res.status(500)

@@ -11,6 +11,13 @@ import Login from "./Pages/Login.jsx"
 import Home from "./Pages/Home.jsx"
 import PopularRestaurants from './Pages/PopularRestaurants.jsx'
 import RestaurantDetails from './Pages/RestaurantDetails.jsx'
+import Cart from "./Pages/Cart.jsx"
+import CheckoutPage from "./Pages/CheckoutPage.jsx";
+import AddressPage from "./Pages/AddressForm.jsx";
+// import Profile from "./Pages/Profile.jsx"
+import ViewProfile from "./Pages/Profile.jsx"
+import EditProfile from "./Pages/EditProfile.jsx"
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +33,12 @@ function App() {
           {/* <Route path="/home" element={<Home/>} /> */}
           <Route path="/home" element={<PopularRestaurants/>} />
           <Route path="/restaurant/:id" element={<RestaurantDetails/>} />
+          <Route path="/cart" element={<Cart/>} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/address" element={<AddressPage />} />
+          <Route path="/profile" element={<ViewProfile />} />
+          <Route path="/edit-profile" element={<EditProfile />} />
+
         </Routes>
         
       </div>

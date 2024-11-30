@@ -15,6 +15,20 @@ const UserSchema = new Schema({
         type:String,
         required: true,
     },
+    Gender:{
+        type:String,
+    },
+    Country:{
+        type:String
+    },
+    CardCredentials: [
+        {
+            CardNumber: { type: String },
+            Expiration: { type: String },
+            CCV: { type: String },
+            NameonCard: { type: String },
+        },
+    ],
 })
 
 const userModel = mongoose.model("users",UserSchema)

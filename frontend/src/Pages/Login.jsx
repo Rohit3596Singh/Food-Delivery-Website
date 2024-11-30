@@ -73,25 +73,35 @@ function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         const { email, password } = loginInfo;
+    
         if (!email || !password) {
-            return handleError('Email and password are required');
+            return handleError("Email and password are required");
         }
+    
         try {
             const url = "http://localhost:3000/auth/login";
             const response = await fetch(url, {
                 method: "POST",
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(loginInfo)
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(loginInfo),
             });
+    
             const result = await response.json();
             console.log("Login API Response:", result);
-            const { success, message, jwtToken, name, error } = result;
+    
+            const { success, message, jwtToken, name, email: userEmail, error } = result;
     
             if (success) {
                 handleSuccess(message);
-                localStorage.setItem('token', jwtToken);
-                localStorage.setItem('loggedInUser', name);
-                navigate('/home'); 
+    
+                // Store user details in localStorage
+                localStorage.setItem("name", name);
+                localStorage.setItem("email", userEmail);
+                localStorage.setItem("token", jwtToken);
+                // localStorage.setItem("userID1", );
+    
+                // Redirect to the home page or desired route
+                navigate("/home");
             } else if (error) {
                 const details = error?.details[0]?.message || "An error occurred";
                 handleError(details);
@@ -103,6 +113,8 @@ function Login() {
             handleError(err.message || "An unexpected error occurred");
         }
     };
+    
+    
 
     return (
         <>

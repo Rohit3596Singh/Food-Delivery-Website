@@ -4,7 +4,7 @@ const router = express.Router()
 
 // app.use('/api', RestaurantRouter);
 router.get("/restaurants",async(req,res)=>{
-    console.log("GET /restaurants called");
+    // console.log("GET /restaurants called");
     try{
         const restaurants = await Restaurant.find();
         res.json(restaurants);
