@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in element's width and height */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Add a default font for better readability */
+}
+
+/* General Styles */
+#restaurant-name {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 50px;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+}
+
+#search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 2%;
+    gap: 10px; /* Add spacing between children */
+    flex-wrap: wrap; /* Wrap search bar on smaller screens */
+}
+
+#search-input {
+    height: 5vh;
+    width: 100%; /* Take full width for responsiveness */
+    max-width: 300px; /* Limit maximum width */
+    border-radius: 50px;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#offer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #FC8A06;
+    align-items: center;
+    height: auto; /* Adjust height automatically for content */
+    padding: 10px;
+    text-align: center;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
+}
+
+#offer p {
+    color: aliceblue;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+#black-offer {
+    background-color: black;
+    border-radius: 50px;
+    height: auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+}
+
+#img {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3%;
+    flex-wrap: wrap; /* Wrap images on smaller screens */
+    gap: 10px; /* Add spacing between images */
+}
+
+#Map {
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+    background-color: beige;
+    flex-direction: column; /* Stack content on smaller screens */
+}
+
+#web h2 {
+    padding: 3%;
+    color: #FC8A06;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    #restaurant-name {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to start */
+        padding: 10px;
+    }
+
+    #search {
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: center; /* Center-align children */
+        gap: 10px;
+    }
+
+    #search-input {
+        width: 90%; /* Occupy most of the screen width */
+        font-size: 16px;
+    }
+
+    #offer {
+        flex-direction: column; /* Stack offer content vertically */
+        gap: 10px; /* Add spacing between items */
+    }
+
+    #img {
+        flex-direction: column; /* Stack images vertically */
+        gap: 20px; /* Add spacing between images */
+    }
+
+    #Map {
+        flex-direction: column; /* Stack map content */
+        padding: 10px;
+        gap: 20px; /* Add spacing between elements */
+    }
+
+    #web h2 {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #search-input {
+        font-size: 14px;
+    }
+
+    #offer p {
+        font-size: 14px; /* Reduce font size for smaller devices */
+    }
+
+    #black-offer {
+        font-size: 12px; /* Adjust button text size */
+    }
+
+    #web h2 {
+        font-size: 16px; /* Smaller font size for headings */
+    }
+}

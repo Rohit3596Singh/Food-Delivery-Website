@@ -14,10 +14,14 @@ const AuthRouter = require("./Routes/AuthRouter")
 const RestaurantRouter  = require("./Routes/RestaurantRouter")
 const AddressRouter = require("./Routes/addressRoute")
 const ProfileRoute = require("./Routes/ProfileRoute")
+const AddCardRoute = require("./Routes/AddCardRoute")
+const GetCardRoute = require("./Routes/GetCardRoute")
 
-app.use(cors());
+// app.use(cors());
 // app.use("/api", RestaurantRouter);
 // require('./script/importData')
+
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
 
 
@@ -50,6 +54,8 @@ app.use("/auth",AuthRouter)
 app.use("/api",RestaurantRouter)
 app.use("/address",AddressRouter);
 app.use("/profile",ProfileRoute );
+app.use("/bank",AddCardRoute );
+app.use("/credential",GetCardRoute)
 
 
 

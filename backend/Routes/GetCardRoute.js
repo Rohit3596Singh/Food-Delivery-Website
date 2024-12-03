@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const UserModel = require("../model/user.schema");
 
-app.get("/profile/get-cards", async (req, res) => {
+router.get("/get-cards", async (req, res) => {
     const { email } = req.query;
     const user = await UserModel.findOne({ email });
     if (user) {

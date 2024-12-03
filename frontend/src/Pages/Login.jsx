@@ -10,7 +10,7 @@ import burgerLoginImage from "../assets/burgerLoginImage.png"
 import LOGO from "../assets/LOGO 1.png"
 import LOGO2 from "../assets/LOGO2.png"
 import intro from "../assets/Intro.png"
-import playstore from "../assets/Platstore.png"
+import playstore from "../assets/Playtstore.png"
 import facebook from "../assets/Facebook.png"
 import instagram from "../assets/Instagram.png"
 import snapchat from "../assets/Snapchat.png"
@@ -89,7 +89,7 @@ function Login() {
             const result = await response.json();
             console.log("Login API Response:", result);
     
-            const { success, message, jwtToken, name, email: userEmail, error } = result;
+            const { userId,success, message, jwtToken, name, email: userEmail, error } = result;
     
             if (success) {
                 handleSuccess(message);
@@ -98,7 +98,7 @@ function Login() {
                 localStorage.setItem("name", name);
                 localStorage.setItem("email", userEmail);
                 localStorage.setItem("token", jwtToken);
-                // localStorage.setItem("userID1", );
+                localStorage.setItem("userID1", userId );
     
                 // Redirect to the home page or desired route
                 navigate("/home");
@@ -177,12 +177,12 @@ function Login() {
         <p>Get Exclusive Deals in Your Inbox</p>
         <input type="email" placeholder="yourmail@gmail.com" />
         <button>Subscribe</button>
-        {/* <p id="social-media">
+        <p id="social-media">
             <img src={facebook} alt="" />
             <img src={instagram} alt="" />
             <img src={snapchat} alt="" />
             <img src={tiktok} alt="" />
-        </p> */}
+        </p>
     </div>
     <div>
         <p>Legal Pages</p>

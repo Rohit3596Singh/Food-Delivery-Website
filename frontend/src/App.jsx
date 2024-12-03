@@ -17,6 +17,7 @@ import AddressPage from "./Pages/AddressForm.jsx";
 // import Profile from "./Pages/Profile.jsx"
 import ViewProfile from "./Pages/Profile.jsx"
 import EditProfile from "./Pages/EditProfile.jsx"
+import OrderPlaced from "./Pages/orderPlaced.jsx"
 
 
 function App() {
@@ -33,11 +34,12 @@ function App() {
           {/* <Route path="/home" element={<Home/>} /> */}
           <Route path="/home" element={<PopularRestaurants/>} />
           <Route path="/restaurant/:id" element={<RestaurantDetails/>} />
-          <Route path="/cart" element={<Cart/>} />
+          <Route path="/cart/:id" element={<Cart/>} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="/address" element={<AddressPage />} />
           <Route path="/profile" element={<ViewProfile />} />
           <Route path="/edit-profile" element={<EditProfile />} />
+          <Route path="/orderPlaced" element={<OrderPlaced />} />
 
         </Routes>
         

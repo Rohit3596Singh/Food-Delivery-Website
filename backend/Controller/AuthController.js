@@ -4,13 +4,13 @@ const jwt = require("jsonwebtoken");
 
 const signup = async(req,res)=>{
     try{
-        const {name,email,password} = req.body;
+        const {name,email,password,phoneNumber} = req.body;
         const user = await UserModel.findOne({email});
         if(user){
             return res.status(409)
                 .json({message: "user is already exist, you can login", success:false})
         }
-        const userModel = new UserModel({name,email,password});
+        const userModel = new UserModel({name,email,password,phoneNumber});
         userModel.password = await bcrypt.hash(password, 10);
         await userModel.save();
         res.status(201)
@@ -54,8 +54,9 @@ const login = async(req,res)=>{
             message: "Login Successful",
             success: true,
             jwtToken,
+            userId: user._id,
             name: user.name,
-            email: user.email, // Ensure this is present
+            email: user.email, 
         });
     }
     catch(err){

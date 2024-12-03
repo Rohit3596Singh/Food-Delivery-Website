@@ -1,3 +1,4 @@
+import "./AddressForm.css"
 import React, { useState, useEffect } from "react";
 
 const AddressForm = () => {
@@ -13,7 +14,7 @@ const AddressForm = () => {
 
   // Retrieve userId from localStorage when the component mounts
   useEffect(() => {
-    const storedUserId = localStorage.getItem("userId");
+    const storedUserId = localStorage.getItem("userID1");
     if (storedUserId) {
       setAddress((prev) => ({ ...prev, userId: storedUserId }));
     } else {
@@ -103,7 +104,9 @@ const AddressForm = () => {
         />
         Set as default address
       </label>
-      <button type="submit">Save Address</button>
+      <button 
+      id="save-address-button"
+      type="submit">Save Address</button>
     </form>
   );
 };

@@ -1,0 +1,83 @@
+/* General Container Styles */
+#edit-profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: calc(100vh - 150px); /* Adjusting for header and footer */
+    overflow: hidden; /* Ensures no scroll */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Content Wrapper for Side-by-Side Layout */
+.content-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual Sections */
+.profile-section,
+.card-section {
+    width: 40%; /* Each section gets 40% of the width */
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Scrollable only within the section, if needed */
+}
+
+/* Section Headers */
+.profile-section h2,
+.card-section h2 {
+    text-align: center;
+    color: #fc8a06;
+    margin-bottom: 20px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+form button {
+    background-color: #fc8a06;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: center;
+    width: fit-content;
+}
+
+form button:hover {
+    background-color: #e07a05;
+}

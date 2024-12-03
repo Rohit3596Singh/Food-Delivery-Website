@@ -1,11 +1,12 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const user = require("./user.schema")
 
 const AddressSchema = new Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
-    ref: "user.schema", // Assuming you have a User model
+    ref: "user", 
   },
   addressLine1: {
     type: String,
