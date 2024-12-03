@@ -186,9 +186,9 @@ import LOGIN from "../assets/Login.png";
 import LOGO2 from "../assets/LOGO2.png";
 import playstore from "../assets/Playtstore.png";
 import facebook from "../assets/Facebook.png";
-import instagram from "../assets/instagram.png";
-import snapchat from "../assets/snapchat.png";
-import tiktok from "../assets/tiktok.png";
+import instagram from "../assets/Instagram.png";
+import snapchat from "../assets/Snapchat.png";
+import tiktok from "../assets/Tiktok.png";
 
 import Successfully from "../assets/Content.png";
 import backtoHOME from "../assets/Frame 113.png";
