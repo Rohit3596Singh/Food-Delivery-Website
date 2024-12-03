@@ -326,14 +326,14 @@ const EditProfile = () => {
         if (storedCountry) setCountry(storedCountry);
 
         // Fetch saved cards
-        axios.get("http://localhost:3000/bank/get-card", { params: { email: storedEmail } })
+        axios.get("https://food-delivery-website-1-tobh.onrender.com/bank/get-card", { params: { email: storedEmail } })
             .then((response) => setCards(response.data.cards))
             .catch((error) => console.error("Error fetching cards:", error));
     }, []);
 
     const handleSaveProfile = async () => {
         try {
-            await axios.put("http://localhost:3000/profile/update-profile", {
+            await axios.put("https://food-delivery-website-1-tobh.onrender.com/profile/update-profile", {
                 email,
                 gender,
                 country,
@@ -349,7 +349,7 @@ const EditProfile = () => {
 
     const handleAddCard = async () => {
         try {
-            await axios.post("http://localhost:3000/bank/add-card", {
+            await axios.post("https://food-delivery-website-1-tobh.onrender.com/bank/add-card", {
                 email,
                 card: cardDetails,
             });

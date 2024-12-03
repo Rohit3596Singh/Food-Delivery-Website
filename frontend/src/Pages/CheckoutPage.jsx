@@ -299,7 +299,7 @@ const CheckoutPage = () => {
 
       try {
         const response = await fetch(
-          `http://localhost:3000/api/address?userId=${userId}`
+          `https://food-delivery-website-1-tobh.onrender.com/api/address?userId=${userId}`
         );
         const addressData = await response.json();
 
@@ -322,7 +322,7 @@ const CheckoutPage = () => {
   const handlePlaceOrder = async () => {
     try {
       const orderData = { cart, address: selectedAddress };
-      const response = await fetch("http://localhost:3000/api/order", {
+      const response = await fetch("https://food-delivery-website-1-tobh.onrender.com/api/order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderData),

@@ -37,7 +37,7 @@ const PopularRestaurants = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/restaurants", {
+      .get("https://food-delivery-website-1-tobh.onrender.com/api/restaurants", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

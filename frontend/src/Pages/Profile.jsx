@@ -14,7 +14,7 @@ import LOGIN from "../assets/Login.png";
 
 import LOGO2 from "../assets/LOGO2.png";
 import playstore from "../assets/Playtstore.png";
-import facebook from "../assets/facebook.png";
+import facebook from "../assets/Facebook.png";
 import instagram from "../assets/instagram.png";
 import snapchat from "../assets/snapchat.png";
 import tiktok from "../assets/tiktok.png";
@@ -43,7 +43,7 @@ const ViewProfile = () => {
         // Fetch cards associated with the user's email
         if (storedEmail) {
             axios
-                .get("http://localhost:3000/credential/get-cards", { params: { email: storedEmail } })
+                .get("https://food-delivery-website-1-tobh.onrender.com/credential/get-cards", { params: { email: storedEmail } })
                 .then((response) => {
                     setCards(response.data.cards);
                 })
@@ -65,7 +65,7 @@ const ViewProfile = () => {
         };
 
         axios
-            .post("http://localhost:3000/bank/add-card", { email, card })
+            .post("https://food-delivery-website-1-tobh.onrender.com/bank/add-card", { email, card })
             .then((response) => {
                 console.log(response.data.message);
                 // Refresh card list

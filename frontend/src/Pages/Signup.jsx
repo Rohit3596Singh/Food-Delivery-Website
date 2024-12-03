@@ -45,7 +45,7 @@ const Signup = () => {
             return handleError("All fields are required")
         }
         try{
-            const url = "http://localhost:3000/auth/signup";
+            const url = "https://food-delivery-website-1-tobh.onrender.com/auth/signup";
             const response = await fetch(url,{
                 method:"POST",
                 headers:{

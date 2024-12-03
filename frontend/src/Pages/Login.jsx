@@ -79,7 +79,7 @@ function Login() {
         }
     
         try {
-            const url = "http://localhost:3000/auth/login";
+            const url = "https://food-delivery-website-1-tobh.onrender.com/auth/login";
             const response = await fetch(url, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

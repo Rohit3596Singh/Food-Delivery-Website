@@ -39,7 +39,7 @@ const RestaurantPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/restaurants/${id}`) // Fetch restaurant by ID
+      .get(`https://food-delivery-website-1-tobh.onrender.com/api/restaurants/${id}`) // Fetch restaurant by ID
       .then((response) => {
         setRestaurant(response.data);
       })

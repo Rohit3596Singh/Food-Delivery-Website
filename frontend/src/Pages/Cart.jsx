@@ -32,7 +32,7 @@ const Cart = () => {
   // Fetch restaurant details
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/api/restaurants/${id}`)
+      .get(`https://food-delivery-website-1-tobh.onrender.com/api/restaurants/${id}`)
       .then((response) => {
         console.log(response.data)
         setRestaurant(response.data);
