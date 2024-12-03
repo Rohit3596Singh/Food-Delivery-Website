@@ -21,7 +21,7 @@ const GetCardRoute = require("./Routes/GetCardRoute")
 // app.use("/api", RestaurantRouter);
 // require('./script/importData')
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: "*", credentials: true }));
 
 
 
