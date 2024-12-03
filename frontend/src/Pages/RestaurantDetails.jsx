@@ -18,13 +18,13 @@ import IMG4 from "../assets/Group 25.png"
 import IMG5 from "../assets/Group 31.png"
 import IMG6 from "../assets/Group 37.png"
 
-import LOGO2 from "../assets/LOGO2.png"
-import intro from "../assets/Intro.png"
-import playstore from "../assets/Playtstore.png"
-import facebook from "../assets/Facebook.png"
-import instagram from "../assets/Instagram.png"
-import snapchat from "../assets/Snapchat.png"
-import tiktok from "../assets/TikTok.png"
+// import LOGO2 from "../assets/LOGO2.png"
+// import intro from "../assets/Intro.png"
+// import playstore from "../assets/Playtstore.png"
+// import facebook from "../assets/Facebook.png"
+// import instagram from "../assets/Instagram.png"
+// import snapchat from "../assets/Snapchat.png"
+// import tiktok from "../assets/TikTok.png"
 
 const RestaurantPage = () => {
   const { id } = useParams(); // Get restaurant ID from URL

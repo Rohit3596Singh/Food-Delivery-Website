@@ -297,7 +297,7 @@ import playstore from "../assets/Playtstore.png";
 import facebook from "../assets/Facebook.png";
 import instagram from "../assets/Instagram.png";
 import snapchat from "../assets/Snapchat.png";
-import tiktok from "../assets/Tiktok.png";
+import tiktok from "../assets/TikTok.png";
 
 
 const EditProfile = () => {
